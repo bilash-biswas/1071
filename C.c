@@ -1,0 +1,59 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,x,i,y,c=0;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    if(a>b)
+    {
+        x=b;
+        y=a;
+    }
+    if(b>a)
+    {
+        x=a;
+        y=b;
+    }
+    if(a==b)
+    {
+        printf("%d\n",0);
+        goto bilash;
+    }
+    if(x%2==0)
+    {
+        if(x>=0)
+        {
+        for(i=x+1;i<y;i=i+2)
+        {
+            c=c+i;
+        }
+        }
+        if(x<0)
+        {
+        for(i=x+1;i<y;i=i+2)
+        {
+            c=c+i;
+        }
+        }
+    }
+    if(x%2!=0)
+    {
+        if(x>=0)
+        {
+        for(i=x+2;i<y;i=i+2)
+        {
+            c=c+i;
+        }
+        }
+        if(x<0)
+        {
+        for(i=x+2;i<y;i=i+2)
+        {
+            c=c+i;
+        }
+        }
+    }
+    printf("%d\n",c);
+    bilash:
+    return 0;
+}
